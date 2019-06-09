@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.home.androidkotlincoroutinesdemo2.user.data.response.OneHundredAnimalDataResponse.Result.Result"/>
+        <variable name="user" type="Result"/>
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="16dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/simpleDraweeView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                tools:placeholderImage="@drawable/ic_launcher"/>
+
+        <LinearLayout
+                android:layout_marginLeft="16dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textSize="18dp"
+                    android:textColor="#C0334D"
+                    android:text='@{@string/activity_zoo_name + user.name}'/>
+
+            <TextView
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="#D6618F"
+                    android:text='@{@string/activity_zoo_distribution + user.distribution}'/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

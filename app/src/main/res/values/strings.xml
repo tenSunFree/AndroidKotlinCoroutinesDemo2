@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidKotlinCoroutinesDemo2</string>
+    <string name="activity_zoo_name">暱稱︰</string>
+    <string name="activity_zoo_distribution">分布︰</string>
+</resources>
